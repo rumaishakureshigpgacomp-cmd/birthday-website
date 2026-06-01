@@ -1,0 +1,51 @@
+<html>
+<head>
+<title> CAKE </title>
+<style>
+body{
+    backgrond:#ffe5ec;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    flex-direction:column;
+    font-family:arial;
+}
+.candle{
+       font-size:60px;
+       margin-bottom:-10px;
+}
+.cake{
+     font-size:180px;
+}
+
+button{
+     padding:12px 25px;
+     font-size:20px;
+     border:none;
+     border-radius:15px;
+     cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<h1>🎂 HAPPY BIRTHDAY 🎂</h1>
+
+<div id="candle" class="candle"></div>
+<div class="cake">🎂</div>
+
+<br>
+
+<button onclick="blow()">BLOW CANDLE</button>
+
+<script>
+function blow(){
+document.getElementById("candle").innerHTML="✨";
+alert("Ahmmmm...Ahmmmmm...Apki Wish puri Hui ❤️ ");
+location.href="letter.html";
+}
+</script>
+
+</body>
+</html>

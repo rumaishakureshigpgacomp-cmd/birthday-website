@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise ❤️</title>
+
+<style>
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff4d6d,#ff8fab);
+    font-family:Arial,sans-serif;
+}
+
+.box{
+    text-align:center;
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    width:320px;
+    box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+h2{
+    color:#ff4d6d;
+}
+
+#display{
+    width:90%;
+    height:50px;
+    font-size:25px;
+    text-align:center;
+    margin:15px 0;
+    border:2px solid #ff4d6d;
+    border-radius:10px;
+}
+
+.keypad{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+button{
+    height:60px;
+    font-size:22px;
+    border:none;
+    border-radius:15px;
+    background:#ff4d6d;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>❤️ Enter Secret Password ❤️</h2>
+
+    <input type="password" id="display" readonly>
+
+    <div class="keypad">
+        <button onclick="add('1')">1</button>
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+
+        <button onclick="clearPass()">❌</button>
+        <button onclick="add('0')">0</button>
+        <button onclick="checkPass()">❤️</button>
+    </div>
+</div>
+
+<script>
+const password = "3604";
+
+function add(num){
+    document.getElementById("display").value += num;
+}
+
+function clearPass(){
+    document.getElementById("display").value = "";
+}
+
+function checkPass(){
+    let entered = document.getElementById("display").value;
+
+    if(entered === password){
+        window.location.href = "cake.html";
+    }else{
+        alert("Wrong Password 😜");
+        clearPass();
+    }
+}
+</script>
+</body>
+</html>

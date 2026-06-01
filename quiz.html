@@ -1,0 +1,87 @@
+
+<html>
+<head>
+<title>Funny Quiz 😂</title>
+
+<style>
+body{
+    background:#ffe5ec;
+    font-family:Arial;
+    text-align:center;
+    padding-top:50px;
+}
+
+.quiz{
+    background:white;
+    width:80%;
+    max-width:500px;
+    margin:auto;
+    padding:20px;
+    border-radius:20px;
+}
+
+button{
+    display:block;
+    margin:10px auto;
+    padding:10px 20px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+</style>
+</head>
+<body>
+
+<div class="quiz">
+
+<h1>😂 Funny Birthday Quiz 😂</h1>
+
+<div id="q1">
+<h3>1. Who is the best wife? 😎</h3>
+<button onclick="nextQ()">RUMI</button>
+<button onclick="wrong()">SOMEONE</button>
+</div>
+
+<div id="q2" style="display:none;">
+<h3>2. Who deserves the biggest birthday cake? 🎂</h3>
+<button onclick="nextQ2()">RUMI</button>
+<button onclick="wrong()">SIR JII</button>
+</div>
+
+<div id="q3" style="display:none;">
+<h3>3. Who Fight first? 📱❤️</h3>
+<button onclick="finishQuiz()">SIR JII</button>
+<button onclick="wrong()">RUMI</button>
+</div>
+
+</div>
+
+<script>
+function wrong(){
+    alert("Wrong Answer 🤣 Try Again!");
+}
+
+function nextQ(){
+    document.getElementById("q1").style.display="none";
+    document.getElementById("q2").style.display="block";
+}
+
+function nextQ2(){
+    document.getElementById("q2").style.display="none";
+    document.getElementById("q3").style.display="block";
+}
+
+function finishQuiz(){
+    alert("Perfect Score ❤️🎉");
+
+    // Agar next page song.html hai:
+    window.location.href="video.html";
+
+    // Single-file project ho toh iski jagah:
+    // showPage(5);
+}
+</script>
+
+</body>
+</html>
